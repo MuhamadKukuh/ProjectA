@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class status extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'id_status';
 }

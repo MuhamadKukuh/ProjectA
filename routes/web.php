@@ -25,9 +25,13 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/Home', [userController::class, 'index'])->name('home');
     Route::post('/registration', [authController::class, 'registration'])->name('registration');
     Route::get('/logout', [authController::class, 'logout'])->name('logout');
+    Route::get('/buku-absen/{kelas:kelas}', [userController::class, 'absen']);
+    Route::get('/Dashboard', [userController::class, 'dashboard']);
 });
 
 // SuperAdmin
 Route::group(['middleware' => 'guru'], function(){
     Route::get('/register', [authController::class, 'register'])->name('register');
+    Route::post('/tambah-kelas', [superAdminController::class, 'insert'])->name('insert');
+    // Route::get('/Dashboard', [userController::class, 'dashboard']);
 });

@@ -11,4 +11,13 @@ class siswa extends Model
 
     protected $primaryKey = 'id_siswa';
     protected $guarded  = ['id_siswa'];
+
+    public function nisFormat($nis){
+        $format = sprintf('%s.%s.%s',
+                substr($nis, 0,4),
+                substr($nis, 4,2),
+                substr($nis, 6) );
+
+        return $format;
+    }
 }

@@ -14,7 +14,11 @@ class CreateRecaptsTable extends Migration
     public function up()
     {
         Schema::create('recapts', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_recapt');
+            $table->foreignId('id_siswa');
+            $table->foreignId('id_status');
+            $table->date('mounth');
+            $table->date('date');
             $table->timestamps();
         });
     }

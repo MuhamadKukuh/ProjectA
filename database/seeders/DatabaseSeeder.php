@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\kelas;
 use App\Models\siswa;
 use App\Models\gender;
+use App\Models\status;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -38,28 +39,28 @@ class DatabaseSeeder extends Seeder
 
         siswa::create([
             'nama'  => "Saya",
-            'nis'   => '123456',
+            'nis'   => '1234567892',
             'id_kelas' => "1",
             'id_gender' => "1"
         ]);
 
         siswa::create([
             'nama'  => "Saya2",
-            'nis'   => '123456',
+            'nis'   => '1234567892',
             'id_kelas' => "1",
             'id_gender' => "1"
         ]);
 
         siswa::create([
             'nama'  => "Saya3",
-            'nis'   => '123456',
+            'nis'   => '1234567892',
             'id_kelas' => "1",
             'id_gender' => "1"
         ]);
 
         siswa::create([
             'nama'  => "Saya4",
-            'nis'   => '123456',
+            'nis'   => '1234567892',
             'id_kelas' => "1",
             'id_gender' => "1"
         ]);
@@ -70,6 +71,22 @@ class DatabaseSeeder extends Seeder
 
         gender::create([
             'gender'=> 'Laki laki'
+        ]);
+
+        status::create([
+            'status'    => 'Hadir'
+        ]);
+
+        status::create([
+            'status'    => 'Sakit'
+        ]);
+
+        status::create([
+            'status'    => 'Izin'
+        ]);
+
+        status::create([
+            'status'    => 'Alpha'
         ]);
 
     }
